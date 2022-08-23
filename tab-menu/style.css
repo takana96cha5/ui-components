@@ -1,0 +1,63 @@
+/* Main tab interaction styles(the most imporant)*/
+.tab > input[type="radio"] {
+    position: absolute;
+    left: -200vw;
+  }
+
+  .tab .tab-panel {
+    display: none;
+  }
+
+  .tab > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+  .tab > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+  .tab > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+  .tab > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+  .tab > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+  .tab > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+    display: block;
+  }
+  /* Main tab interaction styles(the most imporant)*/
+
+  /*Tab secondary styles*/
+  .tab > label {
+    position: relative;
+    display: inline-block;
+    padding: 15px 15px 25px;
+    border: 1px solid transparent;
+    border-bottom: 0;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .tab > label::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    width: 22px;
+    height: 4px;
+    background: #8d8d8d;
+  }
+
+  .tab > label:hover,
+  .tab > input:focus + label {
+    color: #06c;
+  }
+
+  .tab > label:hover::after,
+  .tab > input:focus + label::after,
+  .tab > input:checked + label::after {
+    background: #06c;
+  }
+
+  .tab > input:checked + label {
+    border-color: #ccc;
+    border-bottom: 1px solid #fff;
+    margin-bottom: -1px;
+  }
+
+  .tab-panel {
+    padding: 30px 0;
+    border-top: 1px solid #ccc;
+  }
+  /*Tab secondary styles*/

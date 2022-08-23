@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSSの読み込み -->
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <!-- -->
+    <title>multi-range-slider</title>
+</head>
+<body>
+    <!-- JS の読込 -->
+    <script src='main.js' defer></script>
+
+    <!-- multi-range-slider -->
+    <div slider id="slider-distance">
+        <div>
+            <div inverse-left style="width:70%;"></div>
+            <div inverse-right style="width:70%;"></div>
+
+            <div range style="left:30%;right:40%;"></div>
+
+            <span thumb style="left:30%;"></span>
+            <span thumb style="left:60%;"></span>
+
+            <div sign style="left:30%;">
+                <span id="value">
+                    30
+                </span>
+            </div>
+
+            <div sign style="left:60%;">
+                <span id="value">
+                    60
+                </span>
+            </div>
+
+        </div>
+        <input id="left-thumb" type="range" tabindex="0" value="30" max="100" min="0" step="1"/>
+
+        <input id="right-thumb" type="range" tabindex="0" value="60" max="100" min="0" step="1"/>
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+.block > div{
+    margin: 0;
+    padding: 0;
+    }
+.block {
+    max-width: 400px;
+    width: 100%;
+    height: 100%;
+    float: left;
+    padding: 15px;
+    z-index: 10;
+    background-color: white;
+    overflow: hidden;
+}
+@media screen and (max-width: 599px) {
+    .block {
+        max-width: 100%;
+    }
+}
+.block > div {
+    display: block;
+    position: relative;
+    padding: 0 0 0 35px;
+    border-bottom: 1px solid white;
+    background-color: #f8f8f8;
+    color: gray;
+}
+.block > div:nth-child(1):before {
+    content: "1";
+    width: 32px;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #52b2c5;
+    padding: 7.5px;
+    margin: 0;
+    color: white;
+}
+.block > div:nth-child(2):before {
+    content: "2";
+    width: 32px;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #52b2c5;
+    padding: 7.5px;
+    margin: 0;
+    color: white;
+}
+.block > div:nth-child(3):before {
+    content: "3";
+    width: 32px;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #52b2c5;
+    padding: 7.5px;
+    margin: 0;
+    color: white;
+}
+.block > div:nth-child(4):before {
+    content: "4";
+    width: 32px;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #52b2c5;
+    padding: 7.5px;
+    margin: 0;
+    color: white;
+}
+.block > div:nth-child(5):before {
+    content: "5";
+    width: 32px;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #52b2c5;
+    padding: 7.5px;
+    margin: 0;
+    color: white;
+}
+.block > div input + label {
+    cursor: pointer;
+    display: block;
+    padding: 7.5px 15px;
+    background-color: #bce0e7;
+    -webkit-transition: background-color 0.25s ease-in-out 0.5s, color 0.25s ease-in-out 0.5s;
+    transition: background-color 0.25s ease-in-out 0.5s, color 0.25s ease-in-out 0.5s;
+    color: gray;
+}
+.block > div input ~ div {
+    visibility: hidden;
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-in-out 0.2s, opacity 0.25s ease-in-out 0.25s, padding 0s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0.2s, opacity 0.25s ease-in-out 0.25s, padding 0s ease-in-out 0s;
+}
+.block > div input ~ div p {
+    padding: 0 15px;
+}
+.block > div input:checked + label {
+    background-color: #a6f0ff;
+    -webkit-transition: background-color 0s ease-in-out 0s;
+    transition: background-color 0s ease-in-out 0s;
+    color: cornflowerblue;
+}
+.block > div input:checked ~ div {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    max-height: 200px;
+    padding: 15px 0;
+    -webkit-transition: all 0.5s ease-in-out 0.2s, opacity 0.25s ease-in-out 0.5s, padding 0s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0.2s, opacity 0.25s ease-in-out 0.5s, padding 0s ease-in-out 0s;
+}

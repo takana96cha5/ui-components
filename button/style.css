@@ -1,0 +1,136 @@
+#container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+#container > div {
+  flex-basis: 300px;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  background-color: white;
+  border: 1px solid black;
+  font-weight: 600;
+  padding: 10px 40px;
+  margin: 10px auto;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: black;
+  text-decoration: none !important;
+}
+
+/* ----------------- */
+
+.btn.float:hover {
+  background-color: black;
+  color: white;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* ----------------- */
+
+.btn.filled {
+  background-color: black;
+  color: white;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.btn.filled:hover {
+  background-color: white;
+  color: black;
+  box-shadow: none;
+}
+
+/* ----------------- */
+
+.btn.letter-spacing:hover {
+  background-color: black;
+  letter-spacing: 3px;
+  color: white;
+}
+
+/* ----------------- */
+
+.btn.shadow {
+  box-shadow: none;
+}
+.btn.shadow:hover {
+  transform: translate(-2.5px, -2.5px);
+  box-shadow: 5px 5px 0 0 black;
+}
+
+/* ----------------- */
+
+.btn.solid {
+  box-shadow: 2px 2px 0 0 black;
+  border-radius: 7px;
+}
+.btn.solid:hover {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+/* ----------------- */
+
+.btn.slide-bg {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn.slide-bg span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+  z-index: -1;
+}
+
+.btn.slide-bg:hover {
+  color: white;
+}
+
+.btn.slide-bg:hover span {
+  transform: none;
+}
+
+/* ----------------- */
+
+.btn.cover-3d {
+  position: relative;
+  z-index: 1;
+  transform-style: preserve-3d;
+  perspective: 300px;
+}
+.btn.cover-3d span {
+  display: inline-block;
+  transform: translateZ(20px);
+}
+.btn.cover-3d::before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateX(90deg);
+  transition: all 0.3s;
+  transform-origin: top center;
+  opacity: 0;
+}
+.btn.cover-3d:hover {
+  color: white;
+}
+.btn.cover-3d:hover::before {
+  transform: none;
+  opacity: 1;
+}
+

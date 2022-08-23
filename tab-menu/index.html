@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="tab">
+        <!-- Tab 1 -->
+        <input type="radio" name="tabset" id="tab1" aria-controls="tabulation1" checked>
+        <label for="tab1">タブ1</label>
+        <!-- Tab 2 -->
+        <input type="radio" name="tabset" id="tab2" aria-controls="tabulation2">
+        <label for="tab2">タブ2</label>
+        <!-- Tab 3 -->
+        <input type="radio" name="tabset" id="tab3" aria-controls="tabulation3">
+        <label for="tab3">タブ3</label>
+
+        <div class="tab-panels">
+          <section id="tabulation1" class="tab-panel">
+            コンテンツ1
+          </section>
+          <section id="tabulation2" class="tab-panel">
+            コンテンツ2
+          </section>
+          <section id="tabulation3" class="tab-panel">
+              コンテンツ3
+          </section>
+        </div>
+      </div>
+</body>
+</html>
